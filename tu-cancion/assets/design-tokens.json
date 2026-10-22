@@ -1,0 +1,321 @@
+{
+  "name": "Tu Canción",
+  "version": 4,
+  "color": {
+    "themes": [
+      {
+        "id": "papel",
+        "name": "Papel"
+      },
+      {
+        "id": "birome",
+        "name": "Birome"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "birome",
+        "value": "#1E3C96",
+        "usage": "Azul de birome: logo, títulos y fondos de pieza. Texto blanco encima da 9,8:1. Alrededor del 30% de la pieza."
+      },
+      {
+        "name": "malvon",
+        "value": "#E0435C",
+        "usage": "Acento: botón, precio del combo y dedicatoria a mano. Alrededor del 10%. Como texto sobre blanco (4,1:1) solo desde 24 px o en negrita desde 19 px."
+      },
+      {
+        "name": "tinta",
+        "value": "#16205A",
+        "usage": "Texto sobre papel (14,1:1) y fondo de la franja final de la web."
+      },
+      {
+        "name": "papel",
+        "value": "#F6F7FA",
+        "usage": "Fondo general, alrededor del 60% de la pieza."
+      },
+      {
+        "name": "plata",
+        "value": "#5F6679",
+        "usage": "Texto secundario sobre papel (5,4:1)."
+      },
+      {
+        "name": "blanco",
+        "value": "#FFFFFF",
+        "usage": "Tarjetas sobre papel y texto sobre birome, tinta o malvón."
+      },
+      {
+        "name": "ground",
+        "value": {
+          "papel": "{papel}",
+          "birome": "{birome}"
+        },
+        "usage": "Fondo de la pieza o de la página."
+      },
+      {
+        "name": "ink",
+        "value": {
+          "papel": "{tinta}",
+          "birome": "{blanco}"
+        },
+        "usage": "Texto principal sobre ground."
+      },
+      {
+        "name": "ink-muted",
+        "value": {
+          "papel": "{plata}",
+          "birome": "#C9D3FF"
+        },
+        "usage": "Texto secundario sobre ground."
+      },
+      {
+        "name": "display",
+        "value": {
+          "papel": "{birome}",
+          "birome": "{blanco}"
+        },
+        "usage": "Títulos grandes sobre ground."
+      },
+      {
+        "name": "surface",
+        "value": "#FFFFFF",
+        "usage": "Tarjetas y fundas, en los dos temas."
+      },
+      {
+        "name": "on-surface",
+        "value": "#16205A",
+        "usage": "Texto sobre surface."
+      },
+      {
+        "name": "muted-on-surface",
+        "value": "#5F6679",
+        "usage": "Texto secundario sobre surface."
+      },
+      {
+        "name": "accent",
+        "value": "#E0435C",
+        "usage": "Acento sobre surface: precio del combo y dedicatoria. Una sola vez por pieza."
+      },
+      {
+        "name": "button",
+        "value": "#E0435C",
+        "usage": "Fondo del botón principal."
+      },
+      {
+        "name": "on-button",
+        "value": "#FFFFFF",
+        "usage": "Texto del botón, en negrita y desde 19 px."
+      },
+      {
+        "name": "button-hover",
+        "value": "#C9324B",
+        "usage": "Fondo del botón al pasar el cursor."
+      },
+      {
+        "name": "line",
+        "value": {
+          "papel": "{tinta}",
+          "birome": "{blanco}"
+        },
+        "usage": "Renglones de 2 px: separadores de filas y bordes de tarjetas."
+      },
+      {
+        "name": "disco",
+        "value": {
+          "papel": "{birome}",
+          "birome": "{blanco}"
+        },
+        "usage": "Vinilo de la ó del logo."
+      },
+      {
+        "name": "disco-surco",
+        "value": {
+          "papel": "{papel}",
+          "birome": "{birome}"
+        },
+        "usage": "Surcos y brillos del disco."
+      },
+      {
+        "name": "disco-etiqueta",
+        "value": "#E0435C",
+        "usage": "Etiqueta del disco y tilde de la ó."
+      },
+      {
+        "name": "campana",
+        "value": "#E0435C",
+        "usage": "Fondo del aviso de campaña. Solo existe mientras dura una campaña."
+      },
+      {
+        "name": "lado-b-fondo",
+        "value": "#1A1712",
+        "usage": "Fondo de la etiqueta Lado B, que señala a Restauración de fotos. Es el único lugar donde aparecen sus colores."
+      },
+      {
+        "name": "lado-b-texto",
+        "value": "#FFD23F",
+        "usage": "Texto de la etiqueta Lado B."
+      }
+    ]
+  },
+  "type": {
+    "fonts": [],
+    "families": {
+      "display": "\"Bricolage Grotesque\", \"Arial Narrow\", system-ui, sans-serif",
+      "body": "Figtree, \"Segoe UI\", system-ui, sans-serif",
+      "hand": "\"Reenie Beanie\", \"Segoe Print\", cursive"
+    },
+    "groups": [
+      {
+        "name": "Títulos",
+        "family": "display",
+        "styles": [
+          {
+            "name": "display-xl",
+            "fontSize": "84px",
+            "lineHeight": 0.98,
+            "fontWeight": 800,
+            "letterSpacing": "-0.03em",
+            "sample": "Tu historia, hecha canción.",
+            "usage": "Título de portada de la web."
+          },
+          {
+            "name": "display-lg",
+            "fontSize": "46px",
+            "lineHeight": 1.02,
+            "fontWeight": 800,
+            "letterSpacing": "-0.02em",
+            "sample": "Una canción para cada historia",
+            "usage": "Título de un post o de una sección."
+          },
+          {
+            "name": "display-md",
+            "fontSize": "26px",
+            "lineHeight": 1.15,
+            "fontWeight": 700,
+            "letterSpacing": "-0.01em",
+            "sample": "Contanos su historia",
+            "usage": "Subtítulos y títulos de pasos."
+          },
+          {
+            "name": "precio",
+            "fontSize": "28px",
+            "lineHeight": 1.1,
+            "fontWeight": 800,
+            "letterSpacing": "-0.02em",
+            "sample": "$27.000",
+            "usage": "Precios, con cifras tabulares."
+          },
+          {
+            "name": "tag",
+            "fontSize": "17px",
+            "lineHeight": 1,
+            "fontWeight": 700,
+            "sample": "Lado A",
+            "usage": "Etiquetas y botones."
+          }
+        ]
+      },
+      {
+        "name": "Texto",
+        "family": "body",
+        "styles": [
+          {
+            "name": "body-lg",
+            "fontSize": "21px",
+            "lineHeight": 1.45,
+            "fontWeight": 400,
+            "sample": "Contanos dos o tres recuerdos de esa persona.",
+            "usage": "Bajada y párrafos principales."
+          },
+          {
+            "name": "body",
+            "fontSize": "18px",
+            "lineHeight": 1.5,
+            "fontWeight": 400,
+            "sample": "En 48 horas te mandamos la canción para que la escuches antes de regalarla.",
+            "usage": "Texto corrido."
+          },
+          {
+            "name": "label",
+            "fontSize": "15px",
+            "lineHeight": 1.3,
+            "fontWeight": 600,
+            "sample": "tucancion.com.ar",
+            "usage": "Pie de pieza y aclaraciones."
+          }
+        ]
+      },
+      {
+        "name": "A mano",
+        "family": "hand",
+        "styles": [
+          {
+            "name": "hand",
+            "fontSize": "72px",
+            "lineHeight": 0.9,
+            "fontWeight": 400,
+            "sample": "para vos",
+            "usage": "Solo dedicatorias de 2 a 6 palabras, como escritas con birome. El trazo es fino: nunca por debajo de 40 px."
+          }
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "tokens": [
+      {
+        "name": "space-1",
+        "value": "4px",
+        "usage": "Separación mínima."
+      },
+      {
+        "name": "space-2",
+        "value": "8px",
+        "usage": "Relleno vertical de etiquetas."
+      },
+      {
+        "name": "space-3",
+        "value": "14px",
+        "usage": "Entre etiqueta y texto; entre filas."
+      },
+      {
+        "name": "space-4",
+        "value": "24px",
+        "usage": "Relleno de tarjetas y separación entre bloques."
+      },
+      {
+        "name": "space-5",
+        "value": "32px",
+        "usage": "Margen interior de un post a 420 px de referencia."
+      },
+      {
+        "name": "space-6",
+        "value": "48px",
+        "usage": "Margen de página."
+      },
+      {
+        "name": "space-7",
+        "value": "88px",
+        "usage": "Separación entre secciones de la web."
+      }
+    ]
+  },
+  "radius": {
+    "tokens": [
+      {
+        "name": "radius-sm",
+        "value": "4px",
+        "usage": "Etiquetas."
+      },
+      {
+        "name": "radius-md",
+        "value": "6px",
+        "usage": "Tarjetas, listas de precios, botones."
+      },
+      {
+        "name": "radius-lg",
+        "value": "12px",
+        "usage": "Fundas y bloques grandes."
+      }
+    ]
+  }
+}

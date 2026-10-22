@@ -1,0 +1,37 @@
+{
+  "brand": "Tu Canción",
+  "version": "1.0.0",
+  "primitive": {
+    "color": {
+      "birome": "#1E3C96",
+      "malvon": "#E0435C",
+      "tinta": "#16205A",
+      "papel": "#F6F7FA",
+      "plata": "#5F6679",
+      "blanco": "#FFFFFF",
+      "noche": "#0D1330"
+    },
+    "font": {
+      "display": "'Bricolage Grotesque', 'Arial Narrow', system-ui, sans-serif",
+      "body": "'Figtree', 'Segoe UI', system-ui, sans-serif",
+      "hand": "'Reenie Beanie', 'Segoe Print', cursive"
+    },
+    "radius": { "card": "6px", "pill": "999px" }
+  },
+  "semantic": {
+    "color.primary": "{primitive.color.birome}",
+    "color.accent": "{primitive.color.malvon}",
+    "color.text": "{primitive.color.tinta}",
+    "color.text-muted": "{primitive.color.plata}",
+    "color.bg": "{primitive.color.papel}",
+    "color.surface": "{primitive.color.blanco}",
+    "color.on-primary": "{primitive.color.blanco}"
+  },
+  "component": {
+    "button.bg": "{color.accent}",
+    "button.text": "{color.on-primary}",
+    "button.radius": "{primitive.radius.pill}",
+    "price.color": "{color.accent}",
+    "card.radius": "{primitive.radius.card}"
+  }
+}

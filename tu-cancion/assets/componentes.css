@@ -1,0 +1,60 @@
+/* Tu Canción v4: clases de componentes. Usan las variables de tokens.css.
+   Temas: data-theme="papel" (por defecto) o data-theme="birome" (fondo azul). */
+.tc-display{font-family:var(--font-display);font-weight:800;letter-spacing:-0.02em;line-height:1.02;color:var(--display)}
+
+/* Logo en texto, con la ó como disco */
+.tc-wm{font-family:var(--font-display);font-weight:800;letter-spacing:-0.035em;line-height:1;display:inline-flex;align-items:baseline;white-space:nowrap;color:var(--ink)}
+.tc-wm__tu{font-weight:400;margin-right:.18em;color:var(--display)}
+[data-theme="birome"] .tc-wm__tu{color:#AFC0FF}
+.tc-disco{height:.74em;width:auto;margin:0 .01em;transform:translateY(.035em);flex:none}
+.tc-disco__vin{fill:var(--disco)}
+.tc-disco__brillo{fill:none;stroke:var(--disco-surco);stroke-opacity:.16;stroke-width:20}
+.tc-disco__surco{fill:none;stroke:var(--disco-surco);stroke-opacity:.22;stroke-width:1.4}
+.tc-disco__etq,.tc-disco__tilde{fill:var(--disco-etiqueta)}
+.tc-disco__marca{fill:none;stroke:var(--blanco);stroke-width:2.4;stroke-linecap:round}
+.tc-disco__punto{fill:var(--blanco)}
+.tc-disco__hueco{fill:var(--disco-surco)}
+
+/* El disco gira a 33 1/3 rpm: una vuelta cada 1,8 s, velocidad constante */
+.tc-gira{transform-box:fill-box;transform-origin:center;animation:tc-gira 1.8s linear infinite}
+@keyframes tc-gira{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.tc-gira{animation:none}}
+
+.tc-btn{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:56px;padding:0 30px;border:0;border-radius:var(--radius-md);background:var(--button);color:var(--on-button);font-family:var(--font-display);font-weight:700;font-size:20px;line-height:1;text-decoration:none;cursor:pointer;transition:background-color 150ms ease}
+.tc-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.tc-btn--secundario{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+@media (hover: hover) and (pointer: fine){
+  .tc-btn:hover{background:var(--button-hover)}
+  .tc-btn--secundario:hover{background:var(--surface);color:var(--on-surface)}
+}
+
+.tc-precios{box-sizing:border-box;background:var(--surface);color:var(--on-surface);border:2px solid var(--on-surface);border-radius:var(--radius-md);padding:8px 28px;display:flex;flex-direction:column;font-variant-numeric:tabular-nums}
+.tc-precios__fila{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;padding:18px 0;border-bottom:2px solid var(--on-surface);font-size:20px}
+.tc-precios__fila b{font-family:var(--font-display);font-weight:800;font-size:30px;letter-spacing:-0.02em;white-space:nowrap}
+.tc-precios__fila--combo{border-bottom:0;font-weight:700}
+.tc-precios__fila--combo b{color:var(--accent)}
+
+/* Aviso de campaña: una franja arriba de la web. Se borra cuando termina la campaña. */
+.tc-aviso{background:var(--campana);color:var(--blanco);padding:12px 24px;font-family:var(--font-body);font-size:19px;font-weight:700;line-height:1.35}
+
+/* Etiquetas de lado: colores fijos, porque identifican cada servicio */
+.tc-lado{display:inline-flex;align-items:center;gap:var(--space-3);font-family:var(--font-body);font-size:21px;font-weight:500}
+.tc-tag{display:inline-block;padding:var(--space-2) 12px;border-radius:var(--radius-sm);background:var(--birome);color:var(--blanco);font-family:var(--font-display);font-weight:700;font-size:17px;line-height:1;white-space:nowrap}
+[data-theme="birome"] .tc-tag{background:var(--blanco);color:var(--birome)}
+.tc-funda .tc-tag{background:var(--birome);color:var(--blanco)}
+.tc-tag--b{background:var(--lado-b-fondo);color:var(--lado-b-texto)}
+.tc-tag--ab{background:var(--tinta);color:var(--blanco)}
+
+/* La funda del disco: la dedicatoria va escrita a mano sobre renglones, como la etiqueta de un disco */
+.tc-funda{box-sizing:border-box;position:relative;background:var(--surface);color:var(--on-surface);border:2px solid var(--on-surface);border-radius:var(--radius-lg);padding:24px 28px 34px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.tc-funda__cabecera{align-self:stretch;display:flex;align-items:center;justify-content:space-between;font-family:var(--font-display);font-size:17px;font-weight:700}
+.tc-funda__duracion{color:var(--accent);font-variant-numeric:tabular-nums}
+.tc-funda__mano{align-self:stretch;display:flex;flex-direction:column;gap:14px;font-family:var(--font-hand);font-size:104px;line-height:.74;color:var(--accent)}
+.tc-funda__renglon{display:block;border-bottom:3px solid var(--on-surface);white-space:nowrap}
+.tc-funda--chica{padding:20px 20px 28px}
+.tc-funda--chica .tc-funda__mano{font-size:58px;gap:12px}
+.tc-funda--chica .tc-funda__renglon{border-bottom-width:2px}
+/* El disco que asoma detrás de la funda (el símbolo sin la tilde) */
+.tc-con-disco{position:relative}
+.tc-con-disco>.tc-funda{margin-right:30%}
+.tc-funda__disco{position:absolute;right:0;top:7%;height:86%;width:auto}

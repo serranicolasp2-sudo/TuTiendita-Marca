@@ -1,0 +1,362 @@
+<title>Tu Canción · Manual de marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=Reenie+Beanie&display=swap">
+<style>
+/* Layout: una columna tipo álbum de fotos; cada sección es una "página" con su rótulo de birome */
+:root{
+  --papel:#F6F7FA;       /* blanco de papel fotográfico, apenas frío */
+  --hoja:#FFFFFF;
+  --tinta:#16205A;       /* texto: azul birome profundo */
+  --birome:#1E3C96;      /* color principal */
+  --malvon:#E0435C;      /* acento: malvón de patio */
+  --plata:#5F6679;       /* gris de copia en plata */
+  --linea:#DDE1EA;
+  --suave:#EBEEF6;
+  --f-display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --f-texto:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --f-mano:"Reenie Beanie", "Segoe Print", cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --papel:#0D1330;--hoja:#141B3D;--tinta:#E8EBF5;--birome:#8EA6FF;--malvon:#FF6E84;--plata:#9AA1B5;--linea:#283157;--suave:#1A2249;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --papel:#0D1330;--hoja:#141B3D;--tinta:#E8EBF5;--birome:#8EA6FF;--malvon:#FF6E84;--plata:#9AA1B5;--linea:#283157;--suave:#1A2249;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--papel);color:var(--tinta);font-family:var(--f-texto);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:980px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.1;margin:0}
+h2{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:19px;font-weight:600}
+p{margin:0;max-width:65ch}
+.rotulo{font-family:var(--f-mano);font-size:26px;color:var(--malvon);line-height:1;transform:rotate(-2deg);display:inline-block}
+section{display:grid;gap:22px;padding-block:56px;border-top:1px solid var(--linea)}
+.sec-head{display:grid;gap:8px}
+.muted{color:var(--plata)}
+.small{font-size:14px}
+code,.mono{font-family:ui-monospace,Consolas,monospace;font-size:13px}
+
+/* ---------- Logo ---------- */
+.wordmark{font-family:var(--f-display);font-weight:800;letter-spacing:-.035em;line-height:1;display:inline-flex;align-items:baseline;white-space:nowrap;color:var(--tinta)}
+.wordmark .disco{height:.74em;width:auto;margin:0 .01em;transform:translateY(.035em);flex:none}
+.wordmark .tu{font-weight:400;margin-right:.18em;color:var(--birome)}
+.disco .vin{fill:var(--birome)}
+.disco .surco{fill:none;stroke:var(--papel);stroke-opacity:.22;stroke-width:1.4}
+.disco .etq{fill:var(--malvon)}
+.disco .agujero{fill:var(--papel)}
+.disco .tilde{fill:var(--malvon)}
+.sobre-tinta{--tinta:#FFFFFF;--birome:#AFC0FF;--papel:#1E3C96}
+.sobre-tinta .disco .vin{fill:#FFFFFF}
+.sobre-tinta .disco .surco{stroke:#1E3C96;stroke-opacity:.25}
+.sobre-tinta .disco .agujero{fill:#1E3C96}
+
+header.hero{display:grid;gap:18px;padding-block:72px 48px}
+header.hero .wordmark{font-size:clamp(64px,13vw,140px)}
+.lema{font-family:var(--f-display);font-size:clamp(22px,3.4vw,32px);font-weight:600;color:var(--birome)}
+.lema em{font-style:normal;color:var(--malvon)}
+
+.tablero{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.lamina{background:var(--hoja);border:1px solid var(--linea);border-radius:6px;padding:28px;display:grid;gap:14px;align-content:space-between;min-height:200px;min-width:0}
+.lamina.tinta{background:#1E3C96;border-color:#1E3C96;color:#fff}
+.lamina .wordmark{font-size:48px}
+.lamina figcaption{font-size:13px;color:var(--plata)}
+.lamina.tinta figcaption{color:#C9D3FF}
+.avatar{width:150px;height:150px;border-radius:50%;background:#1E3C96;display:grid;place-items:center;justify-self:start}
+.avatar svg{width:96px;height:96px}
+.avatar .disco .vin{fill:#fff}.avatar .disco .surco{stroke:#1E3C96;stroke-opacity:.25}.avatar .disco .agujero{fill:#1E3C96}
+
+.linea-fotos{display:grid;gap:4px}
+.linea-fotos .sub{font-family:var(--f-display);font-weight:600;font-size:22px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.esquina{width:18px;height:18px;flex:none;position:relative}
+.esquina::before{content:"";position:absolute;inset:0;border-left:4px solid var(--malvon);border-top:4px solid var(--malvon)}
+
+/* ---------- Arquitectura ---------- */
+.arbol{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.rama{border-left:3px solid var(--birome);padding:4px 0 4px 16px;display:grid;gap:6px;min-width:0}
+.rama.acento{border-color:var(--malvon)}
+.rama .dom{font-family:ui-monospace,Consolas,monospace;font-size:13px;color:var(--birome);overflow-wrap:anywhere}
+.precio{font-variant-numeric:tabular-nums;font-weight:600}
+
+/* ---------- Color ---------- */
+.paleta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.muestra{border-radius:6px;overflow:hidden;border:1px solid var(--linea);background:var(--hoja);min-width:0}
+.muestra .chip{height:96px}
+.muestra .dato{padding:12px 14px;display:grid;gap:2px}
+.muestra b{font-family:var(--f-display);font-size:17px}
+
+/* ---------- Tipografía ---------- */
+.tipos{display:grid;gap:14px}
+.tipo{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:baseline;background:var(--hoja);border:1px solid var(--linea);border-radius:6px;padding:22px 24px}
+.tipo .ej-d{font-family:var(--f-display);font-weight:800;font-size:clamp(30px,5vw,46px);letter-spacing:-.02em;line-height:1}
+.tipo .ej-t{font-size:17px}
+.tipo .ej-m{font-family:var(--f-mano);font-size:40px;color:var(--malvon);line-height:1}
+@media (max-width:640px){.tipo{grid-template-columns:1fr;gap:8px}}
+
+/* ---------- Voz ---------- */
+.voz{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.voz ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.si-no{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.si-no{grid-template-columns:1fr}}
+.ejemplo{background:var(--hoja);border:1px solid var(--linea);border-radius:6px;padding:16px 18px;display:grid;gap:6px;min-width:0}
+.ejemplo .tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.ejemplo.ok .tag{color:var(--birome)}
+.ejemplo.mal .tag{color:var(--malvon)}
+
+/* ---------- Textos ---------- */
+.textos{display:grid;gap:12px}
+.texto{background:var(--hoja);border:1px solid var(--linea);border-radius:6px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.texto header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.texto pre{margin:0;white-space:pre-wrap;font-family:var(--f-texto);font-size:15px;line-height:1.55;overflow-wrap:anywhere}
+button.copiar{font:600 13px var(--f-texto);color:var(--birome);background:var(--suave);border:1px solid var(--linea);border-radius:999px;padding:6px 14px;cursor:pointer}
+button.copiar:focus-visible{outline:2px solid var(--malvon);outline-offset:2px}
+
+/* ---------- Plantillas ---------- */
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.post{aspect-ratio:4/5;max-width:100%;border-radius:6px;overflow:hidden;position:relative;display:grid;min-width:0}
+.post figcaption{position:absolute;left:0;right:0;bottom:-28px;font-size:13px;color:var(--plata)}
+.post-wrap{display:grid;gap:8px}
+.p-antes{background:#1E3C96;color:#fff;grid-template-rows:auto 1fr auto;padding:18px;gap:12px}
+.p-antes .fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.p-antes .foto{aspect-ratio:3/4;border-radius:3px;position:relative;overflow:hidden}
+.p-antes .foto.vieja{background:repeating-linear-gradient(115deg,#8f8a80 0 3px,#a29d92 3px 7px),#9a958a;filter:sepia(.5) contrast(.8)}
+.p-antes .foto.nueva{background:linear-gradient(160deg,#d9c3a7,#9a7b62 55%,#5d4a3f)}
+.p-antes .foto span{position:absolute;left:6px;bottom:6px;font:600 11px var(--f-texto);letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.45);padding:3px 6px;border-radius:2px}
+.p-antes h4{margin:0;font:800 26px/1.05 var(--f-display);letter-spacing:-.02em}
+.p-antes .pie{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:#C9D3FF}
+.p-mama{background:#FFFFFF;color:#16205A;padding:22px;grid-template-rows:auto 1fr auto;border:1px solid var(--linea)}
+.p-mama .mano{font-family:var(--f-mano);font-size:44px;color:#E0435C;line-height:.95;transform:rotate(-3deg);transform-origin:left;align-self:center}
+.p-mama .verso{font:600 17px/1.4 var(--f-texto);color:#1E3C96;margin-top:10px}
+.p-mama .pie{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.p-mama .wordmark{font-size:24px;color:#16205A}
+.p-mama .wordmark .tu{color:#1E3C96}
+.p-mama .disco .vin{fill:#1E3C96}.p-mama .disco .surco{stroke:#fff}.p-mama .disco .agujero{fill:#fff}
+.play{width:40px;height:40px;border-radius:50%;background:#E0435C;display:grid;place-items:center;flex:none}
+.play::before{content:"";border-left:13px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
+.p-precio{background:#E0435C;color:#fff;padding:22px;grid-template-rows:auto 1fr auto;gap:10px}
+.p-precio .k{font:600 12px var(--f-texto);letter-spacing:.1em;text-transform:uppercase}
+.p-precio ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-self:center}
+.p-precio li{display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:8px;font-size:15px}
+.p-precio li b{font:800 21px var(--f-display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.p-precio .cierre{font-family:var(--f-mano);font-size:30px;line-height:1}
+
+.nota{background:var(--suave);border-radius:6px;padding:16px 18px;font-size:15px}
+.nota b{color:var(--malvon)}
+@media (prefers-reduced-motion:no-preference){
+  header.hero .disco{animation:gira 8s linear infinite;transform-origin:50% 58%}
+}
+@keyframes gira{to{rotate:360deg}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- La "ó" de canción: un disco con la tilde. Es el símbolo de la marca. -->
+    <symbol id="disco" viewBox="0 0 100 118">
+      <circle class="vin" cx="50" cy="68" r="48"/>
+      <circle class="surco" cx="50" cy="68" r="40"/>
+      <circle class="surco" cx="50" cy="68" r="33"/>
+      <circle class="surco" cx="50" cy="68" r="26"/>
+      <circle class="etq" cx="50" cy="68" r="17"/>
+      <circle class="agujero" cx="50" cy="68" r="3.6"/>
+      <rect class="tilde" x="50" y="0" width="16" height="30" rx="7" transform="rotate(32 58 15)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="rotulo">manual de marca · octubre 2026</span>
+  <div class="wordmark" role="img" aria-label="tu canción"><span class="tu">tu</span>canci<svg class="disco" viewBox="0 0 100 118"><use href="#disco"/></svg>n</div>
+  <p class="lema">Tu historia, hecha canción. <em>Y esa foto de siempre, como nueva.</em></p>
+  <p class="muted">Canciones personalizadas para regalar y restauración de fotos viejas. Hecho en Sarandí, entregado en todo el país.</p>
+</header>
+
+<section id="arquitectura">
+  <div class="sec-head">
+    <span class="rotulo">cómo se organiza</span>
+    <h2>Una marca, dos líneas y un combo</h2>
+    <p>Todo sale bajo <b>Tu Canción</b>. Hay una sola cuenta de Instagram y una de TikTok; cada dominio lleva a la página de su producto.</p>
+  </div>
+  <div class="arbol">
+    <div class="rama acento">
+      <h3>Tu Canción</h3>
+      <span class="dom">tucancion.com.ar</span>
+      <p class="small">Canción con tu historia, MP3, 1 corrección, entrega en 48 h.</p>
+      <span class="precio">$27.000</span>
+    </div>
+    <div class="rama">
+      <h3>Restauración de fotos</h3>
+      <span class="dom">restauraciondefotos.com.ar</span>
+      <p class="small">Vista previa antes de entregar. Impresión opcional, enviada a tu casa.</p>
+      <span class="precio">$6.500 · pack de 3 $15.900</span>
+    </div>
+    <div class="rama acento">
+      <h3>El combo</h3>
+      <span class="dom">en las dos webs</span>
+      <p class="small">Canción y video con hasta 20 fotos, 3 de ellas restauradas.</p>
+      <span class="precio">$59.900</span>
+    </div>
+  </div>
+  <p class="nota">Usuario en redes: <b>@tucancion.com.ar</b>, libre en Instagram y TikTok al 03/10/2026. <b>@tucancion.ar</b> ya lo usa otro vendedor de canciones en Instagram: nunca lo nombres ni lo etiquetes, y aclarar siempre el dominio completo.</p>
+</section>
+
+<section id="logo">
+  <div class="sec-head">
+    <span class="rotulo">el logo</span>
+    <h2>La ó es un disco</h2>
+    <p>La tilde de canción está sobre un vinilo: suena (la canción) y se guarda (el recuerdo). El disco solo es el ícono para los perfiles.</p>
+  </div>
+  <div class="tablero">
+    <figure class="lamina" style="margin:0">
+      <div class="wordmark" role="img" aria-label="tu canción"><span class="tu">tu</span>canci<svg class="disco" viewBox="0 0 100 118"><use href="#disco"/></svg>n</div>
+      <figcaption>Versión principal, sobre papel.</figcaption>
+    </figure>
+    <figure class="lamina tinta sobre-tinta" style="margin:0">
+      <div class="wordmark" role="img" aria-label="tu canción"><span class="tu">tu</span>canci<svg class="disco" viewBox="0 0 100 118"><use href="#disco"/></svg>n</div>
+      <figcaption>Sobre azul birome.</figcaption>
+    </figure>
+    <figure class="lamina" style="margin:0">
+      <div class="avatar"><svg class="disco" viewBox="0 0 100 118"><use href="#disco"/></svg></div>
+      <figcaption>Foto de perfil de Instagram, TikTok, WhatsApp y Mercado Libre (archivo avatar.png).</figcaption>
+    </figure>
+    <figure class="lamina" style="margin:0">
+      <div class="linea-fotos">
+        <div class="wordmark" style="font-size:34px" role="img" aria-label="tu canción"><span class="tu">tu</span>canci<svg class="disco" viewBox="0 0 100 118"><use href="#disco"/></svg>n</div>
+        <span class="sub"><span class="esquina" aria-hidden="true"></span>Restauración de fotos</span>
+      </div>
+      <figcaption>Para la línea de fotos: el esquinero de álbum marca la foto.</figcaption>
+    </figure>
+  </div>
+  <p class="small muted">Reglas: el disco no se deforma, no se gira y no lleva sombra. El logo va siempre en minúsculas. Dejá alrededor un espacio libre igual a la altura del disco.</p>
+</section>
+
+<section id="color">
+  <div class="sec-head">
+    <span class="rotulo">colores</span>
+    <h2>Birome y malvón</h2>
+    <p>El azul de las dedicatorias escritas con birome y el rojo de los malvones del patio de casa. El papel es blanco de copia fotográfica, no crema.</p>
+  </div>
+  <div class="paleta">
+    <div class="muestra"><div class="chip" style="background:#1E3C96"></div><div class="dato"><b>Birome</b><span class="mono">#1E3C96</span><span class="small muted">Principal: fondos, logo, títulos.</span></div></div>
+    <div class="muestra"><div class="chip" style="background:#E0435C"></div><div class="dato"><b>Malvón</b><span class="mono">#E0435C</span><span class="small muted">Acento: botones, precios, dedicatorias. Poco.</span></div></div>
+    <div class="muestra"><div class="chip" style="background:#16205A"></div><div class="dato"><b>Tinta</b><span class="mono">#16205A</span><span class="small muted">Texto sobre fondo claro.</span></div></div>
+    <div class="muestra"><div class="chip" style="background:#F6F7FA;border-bottom:1px solid #DDE1EA"></div><div class="dato"><b>Papel</b><span class="mono">#F6F7FA</span><span class="small muted">Fondo general.</span></div></div>
+    <div class="muestra"><div class="chip" style="background:#5F6679"></div><div class="dato"><b>Plata</b><span class="mono">#5F6679</span><span class="small muted">Textos secundarios, el "antes" de las fotos.</span></div></div>
+  </div>
+</section>
+
+<section id="tipografia">
+  <div class="sec-head">
+    <span class="rotulo">letras</span>
+    <h2>Tres letras, cada una con su trabajo</h2>
+    <p>Las tres son gratuitas en Google Fonts, Canva y CapCut.</p>
+  </div>
+  <div class="tipos">
+    <div class="tipo"><div><h3>Bricolage Grotesque</h3><span class="small muted">Logo y títulos · ExtraBold</span></div><div class="ej-d">Para mamá, con todo.</div></div>
+    <div class="tipo"><div><h3>Figtree</h3><span class="small muted">Textos, precios y web · Regular / SemiBold</span></div><div class="ej-t">Contanos para quién es, dos o tres recuerdos y el estilo que le gusta. En 48 horas tenés la canción.</div></div>
+    <div class="tipo"><div><h3>Reenie Beanie</h3><span class="small muted">Dedicatorias a mano · solo frases cortas</span></div><div class="ej-m">para vos, ma</div></div>
+  </div>
+</section>
+
+<section id="voz">
+  <div class="sec-head">
+    <span class="rotulo">cómo hablamos</span>
+    <h2>Como alguien de la familia que sabe hacer esto</h2>
+  </div>
+  <div class="voz">
+    <ul>
+      <li>Voseo rioplatense siempre: <i>pedí, contanos, mirá</i>.</li>
+      <li>Frases cortas. Primero lo que recibís, después cómo se hace.</li>
+      <li>La emoción la ponen las historias de los clientes; la marca no la exagera.</li>
+      <li>Decí plazos y precios con números exactos.</li>
+      <li>Somos claros con la IA: "hecha con inteligencia artificial y revisada por una persona".</li>
+    </ul>
+    <div class="si-no">
+      <div class="ejemplo ok"><span class="tag">Así</span><p>Mandanos la foto por WhatsApp. Te mostramos cómo queda antes de que pagues el final.</p></div>
+      <div class="ejemplo mal"><span class="tag">Así no</span><p>✨¡¡Revivimos la MAGIA de tus recuerdos con tecnología de última generación!!✨</p></div>
+      <div class="ejemplo ok"><span class="tag">Así</span><p>Pedila hasta el jueves 15 y la tenés antes del Día de la Madre.</p></div>
+      <div class="ejemplo mal"><span class="tag">Así no</span><p>Entrega rápida garantizada para que sorprendas a quien más querés.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="textos">
+  <div class="sec-head">
+    <span class="rotulo">listos para copiar</span>
+    <h2>Bios y frases</h2>
+  </div>
+  <div class="textos">
+    <div class="texto"><header><h3>Bio de Instagram</h3><button class="copiar" type="button">Copiar</button></header>
+<pre>Tu Canción 🎵 Canciones con tu historia, para regalar
+📷 Restauramos fotos viejas (y te las imprimimos)
+🌷 Día de la Madre: pedí hasta el jueves 15/10
+👇 Pedí la tuya</pre></div>
+    <div class="texto"><header><h3>Bio de TikTok (80 caracteres)</h3><button class="copiar" type="button">Copiar</button></header>
+<pre>Canciones con tu historia 🎵 Fotos viejas como nuevas 📷 Pedí acá 👇</pre></div>
+    <div class="texto"><header><h3>Mensaje de bienvenida de WhatsApp Business</h3><button class="copiar" type="button">Copiar</button></header>
+<pre>¡Hola! Gracias por escribir a Tu Canción 🎵
+¿Qué te gustaría regalar?
+1️⃣ Una canción con tu historia ($27.000)
+2️⃣ Restaurar una foto ($6.500 · 3 fotos $15.900)
+3️⃣ El combo: canción + video con fotos ($59.900)
+Para el Día de la Madre, pedí hasta el jueves 15/10.</pre></div>
+    <div class="texto"><header><h3>Frases</h3><button class="copiar" type="button">Copiar</button></header>
+<pre>Tu historia, hecha canción.
+Esa foto de siempre, como nueva.
+El regalo que no se compra en un shopping.
+Ella te cantó toda la vida. Ahora te toca a vos.</pre></div>
+  </div>
+</section>
+
+<section id="plantillas">
+  <div class="sec-head">
+    <span class="rotulo">piezas para redes</span>
+    <h2>Tres plantillas de post (4:5)</h2>
+    <p>Son maquetas para armar en Canva: las fotos de ejemplo son simulaciones y van reemplazadas por tus muestras reales.</p>
+  </div>
+  <div class="posts">
+    <div class="post-wrap">
+      <figure class="post p-antes" style="margin:0">
+        <h4>La foto del casamiento de los abuelos, 1962.</h4>
+        <div class="fotos"><div class="foto vieja"><span>antes</span></div><div class="foto nueva"><span>después</span></div></div>
+        <div class="pie"><span>Restauración de fotos</span><span>@tucancion.com.ar</span></div>
+      </figure>
+      <span class="small muted">Antes y después: también sirve como reel con el paso de una a la otra.</span>
+    </div>
+    <div class="post-wrap">
+      <figure class="post p-mama" style="margin:0">
+        <div class="wordmark" role="img" aria-label="tu canción"><span class="tu">tu</span>canci<svg class="disco" viewBox="0 0 100 118"><use href="#disco"/></svg>n</div>
+        <div><div class="mano">para vos, ma</div><p class="verso">"Me enseñaste a cocinar sin receta / y a volver siempre a casa"</p></div>
+        <div class="pie"><span class="small">Una canción con tu historia</span><span class="play" aria-hidden="true"></span></div>
+      </figure>
+      <span class="small muted">Dedicatoria: un verso de la canción de muestra y el botón de reproducir.</span>
+    </div>
+    <div class="post-wrap">
+      <figure class="post p-precio" style="margin:0">
+        <span class="k">Día de la Madre · domingo 18</span>
+        <ul>
+          <li>Canción con tu historia <b>$27.000</b></li>
+          <li>Foto restaurada <b>$6.500</b></li>
+          <li>3 fotos restauradas <b>$15.900</b></li>
+          <li>Canción + video con fotos <b>$59.900</b></li>
+        </ul>
+        <span class="cierre">pedila hasta el jueves 15</span>
+      </figure>
+      <span class="small muted">Precios y fecha límite: fijado en el perfil y en las historias.</span>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+document.querySelectorAll('button.copiar').forEach(function(b){
+  b.addEventListener('click',function(){
+    var pre=b.closest('.texto').querySelector('pre');
+    var t=pre.textContent;
+    var listo=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1600)};
+    var plan_b=function(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Seleccionado: Ctrl+C'};
+    try{navigator.clipboard.writeText(t).then(listo,plan_b)}catch(e){plan_b()}
+  });
+});
+</script>

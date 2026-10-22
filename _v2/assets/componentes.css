@@ -1,0 +1,33 @@
+/* Tu Canción: clases de componentes. Usan las variables de tokens.css. */
+.display-xl,.display-lg,.display-md,.precio,.tag,.tc-display{font-stretch:125%}
+.tc-display{font-family:var(--font-display);font-weight:900;letter-spacing:-0.03em;line-height:1;color:var(--display)}
+
+.tc-btn{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:52px;padding:0 26px;border:0;border-radius:var(--radius-md);background:var(--button);color:var(--on-button);font-family:var(--font-display);font-weight:800;font-stretch:125%;font-size:18px;line-height:1;text-decoration:none;cursor:pointer}
+.tc-btn:hover{background:var(--button-hover)}
+.tc-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.tc-btn--secundario{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.tc-btn--secundario:hover{background:var(--surface);color:var(--on-surface)}
+
+.tc-lado{display:inline-flex;align-items:center;gap:var(--space-3);font-family:var(--font-body);font-size:22px;font-weight:500;color:var(--ink)}
+.tc-tag{display:inline-block;padding:var(--space-2) 14px;border-radius:var(--radius-sm);background:var(--chip);color:var(--on-chip);font-family:var(--font-display);font-weight:800;font-stretch:125%;font-size:18px;line-height:1;white-space:nowrap}
+.tc-tag--b{background:var(--surface);color:var(--on-surface)}
+
+.tc-etiqueta{box-sizing:border-box;background:var(--etiqueta);color:var(--cinta);border-radius:var(--radius-md);padding:14px 18px 18px;display:flex;flex-direction:column;gap:6px}
+.tc-etiqueta__cabecera{display:flex;justify-content:space-between;font-family:var(--font-display);font-weight:800;font-stretch:125%;font-size:14px}
+.tc-etiqueta__duracion{color:var(--rec)}
+.tc-etiqueta__mano{font-family:var(--font-hand);font-size:44px;line-height:1.1;border-bottom:2px solid var(--cinta);padding-bottom:4px}
+.tc-etiqueta__renglon{height:22px;border-bottom:2px solid var(--cinta)}
+
+.tc-precios{box-sizing:border-box;background:var(--surface);color:var(--on-surface);border-radius:var(--radius-md);padding:22px 24px;display:flex;flex-direction:column;gap:var(--space-3);font-variant-numeric:tabular-nums}
+.tc-precios__fila{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:18px}
+.tc-precios__fila b{font-family:var(--font-display);font-weight:900;font-stretch:125%;font-size:26px;letter-spacing:-0.02em;white-space:nowrap}
+.tc-precios__fila--combo{border-top:2px solid var(--line);padding-top:var(--space-3);font-weight:700}
+.tc-precios__fila--combo b{color:var(--accent)}
+
+.tc-antes-despues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
+.tc-foto{position:relative;aspect-ratio:4/5;background:var(--foto-vacia);border-radius:var(--radius-sm);overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--cinta);font-size:14px;padding:12px;box-sizing:border-box}
+.tc-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tc-foto__lado{position:absolute;left:10px;bottom:10px}
+
+/* Sobre una tarjeta etiqueta, el Lado B va en yema para no perderse. */
+.tc-precios .tc-tag--b,.tc-etiqueta .tc-tag--b{background:var(--yema);color:var(--cinta)}

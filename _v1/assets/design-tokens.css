@@ -1,0 +1,32 @@
+/* Tu Canción: tokens de diseño v1.0. Fuente: docs/brand-guidelines.md */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=Reenie+Beanie&display=swap");
+
+:root {
+  /* primitivos */
+  --tc-birome: #1E3C96;
+  --tc-malvon: #E0435C;
+  --tc-tinta: #16205A;
+  --tc-papel: #F6F7FA;
+  --tc-plata: #5F6679;
+  --tc-blanco: #FFFFFF;
+  --tc-noche: #0D1330;
+  --tc-font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --tc-font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --tc-font-hand: "Reenie Beanie", "Segoe Print", cursive;
+  --tc-radius-card: 6px;
+  --tc-radius-pill: 999px;
+
+  /* semánticos */
+  --tc-primary: var(--tc-birome);
+  --tc-accent: var(--tc-malvon);
+  --tc-text: var(--tc-tinta);
+  --tc-text-muted: var(--tc-plata);
+  --tc-bg: var(--tc-papel);
+  --tc-surface: var(--tc-blanco);
+  --tc-on-primary: var(--tc-blanco);
+
+  /* componentes */
+  --tc-button-bg: var(--tc-accent);
+  --tc-button-text: var(--tc-on-primary);
+  --tc-price: var(--tc-accent);
+}

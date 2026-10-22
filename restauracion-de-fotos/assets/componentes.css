@@ -1,0 +1,40 @@
+/* Restauración de fotos v1: clases de componentes. Usan las variables de tokens.css.
+   Temas: data-theme="yema" (por defecto) o data-theme="cinta" (fondo negro). */
+.rf-display{font-family:var(--font-display);font-weight:800;letter-spacing:-0.02em;line-height:1.02;color:var(--display)}
+
+/* Logo en texto, sostenido por dos esquineros de álbum */
+.rf-wm{position:relative;display:inline-block;font-family:var(--font-display);font-weight:400;letter-spacing:-0.035em;line-height:1;white-space:nowrap;color:var(--display);padding:.14em .16em .2em}
+.rf-wm b{font-weight:800}
+.rf-wm::before,.rf-wm::after{content:"";position:absolute;width:.27em;height:.27em;box-sizing:border-box}
+.rf-wm::before{left:0;top:0;border-left:.085em solid var(--accent);border-top:.085em solid var(--accent)}
+.rf-wm::after{right:0;bottom:0;border-right:.085em solid var(--accent);border-bottom:.085em solid var(--accent)}
+
+.rf-btn{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:56px;padding:0 30px;border:0;border-radius:var(--radius-md);background:var(--button);color:var(--on-button);font-family:var(--font-display);font-weight:700;font-size:20px;line-height:1;text-decoration:none;cursor:pointer;transition:background-color 150ms ease}
+.rf-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.rf-btn--secundario{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+@media (hover: hover) and (pointer: fine){
+  .rf-btn:hover{background:var(--button-hover)}
+  .rf-btn--secundario:hover{background:var(--surface);color:var(--on-surface)}
+}
+
+.rf-precios{box-sizing:border-box;background:var(--surface);color:var(--on-surface);border:2px solid var(--on-surface);border-radius:var(--radius-md);padding:8px 28px;display:flex;flex-direction:column;font-variant-numeric:tabular-nums}
+.rf-precios__fila{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px;padding:18px 0;border-bottom:2px solid var(--on-surface);font-size:20px}
+.rf-precios__fila b{font-family:var(--font-display);font-weight:800;font-size:30px;letter-spacing:-0.02em;white-space:nowrap}
+.rf-precios__fila--combo{border-bottom:0;font-weight:700}
+.rf-precios__fila--combo b{color:var(--accent)}
+
+/* Aviso de campaña: una franja arriba de la web. Se borra cuando termina la campaña. */
+.rf-aviso{background:var(--campana);color:var(--yema);padding:12px 24px;font-family:var(--font-body);font-size:19px;font-weight:700;line-height:1.35}
+
+.rf-tag{display:inline-block;padding:var(--space-2) 12px;border-radius:var(--radius-sm);background:var(--surface);color:var(--on-surface);font-family:var(--font-display);font-weight:700;font-size:17px;line-height:1;white-space:nowrap}
+.rf-tag--despues{background:var(--yema);color:var(--cinta)}
+
+/* Antes y después, con los esquineros de álbum */
+.rf-antes-despues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
+.rf-antes-despues--marco{background:var(--cinta);border-radius:var(--radius-lg);padding:22px}
+.rf-foto{position:relative;aspect-ratio:4/5;background:var(--foto-vacia);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--cinta);font-size:14px;padding:12px;box-sizing:border-box}
+.rf-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.rf-foto .rf-tag{position:absolute;left:10px;bottom:10px}
+.rf-foto--antes::before,.rf-foto--despues::after{content:"";position:absolute;width:26px;height:26px;box-sizing:border-box}
+.rf-foto--antes::before{left:-7px;top:-7px;border-left:6px solid var(--accent);border-top:6px solid var(--accent)}
+.rf-foto--despues::after{right:-7px;bottom:-7px;border-right:6px solid var(--accent);border-bottom:6px solid var(--accent)}

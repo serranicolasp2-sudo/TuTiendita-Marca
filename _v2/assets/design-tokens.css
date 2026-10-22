@@ -1,0 +1,60 @@
+/* Tu Canción: tokens de diseño v2.0 (dirección A: Lado A, Lado B). Fuente: docs/brand-guidelines.md */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Permanent+Marker&display=swap");
+
+:root, [data-theme="yema"] {
+  --yema: #FFD23F;
+  --cinta: #1A1712;
+  --etiqueta: #FFFAEB;
+  --rec: #D7301F;
+  --ground: var(--yema);
+  --ink: var(--cinta);
+  --ink-muted: #4D4424;
+  --display: var(--cinta);
+  --surface: var(--etiqueta);
+  --on-surface: var(--cinta);
+  --accent: var(--rec);
+  --chip: var(--cinta);
+  --on-chip: var(--yema);
+  --button: #D7301F;
+  --on-button: #FFFFFF;
+  --button-hover: #B8271A;
+  --line: var(--cinta);
+  --foto-vacia: #C9BFB4;
+}
+[data-theme="cinta"] {
+  --ground: var(--cinta);
+  --ink: var(--etiqueta);
+  --ink-muted: #C9BFA6;
+  --display: var(--yema);
+  --surface: #2A2620;
+  --on-surface: var(--etiqueta);
+  --accent: #FF6B57;
+  --chip: var(--yema);
+  --on-chip: var(--cinta);
+  --line: #5A5345;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 14px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 88px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --font-display: Archivo, "Arial Black", "Arial Narrow", sans-serif;
+  --font-body: Archivo, "Segoe UI", system-ui, sans-serif;
+  --font-hand: "Permanent Marker", "Segoe Print", cursive;
+}
+
+.display-xl { font-family: var(--font-display); font-size: 84px; line-height: 0.95; font-weight: 900; letter-spacing: -0.035em }
+.display-lg { font-family: var(--font-display); font-size: 46px; line-height: 1.02; font-weight: 900; letter-spacing: -0.03em }
+.display-md { font-family: var(--font-display); font-size: 28px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em }
+.precio { font-family: var(--font-display); font-size: 26px; line-height: 1.1; font-weight: 900; letter-spacing: -0.02em }
+.body-lg { font-family: var(--font-body); font-size: 20px; line-height: 1.45; font-weight: 400 }
+.body { font-family: var(--font-body); font-size: 17px; line-height: 1.5; font-weight: 400 }
+.label { font-family: var(--font-body); font-size: 15px; line-height: 1.3; font-weight: 600 }
+.tag { font-family: var(--font-body); font-size: 18px; line-height: 1; font-weight: 800 }
+.hand { font-family: var(--font-hand); font-size: 44px; line-height: 1.1; font-weight: 400 }

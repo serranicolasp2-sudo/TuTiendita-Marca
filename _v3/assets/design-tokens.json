@@ -1,0 +1,363 @@
+{
+  "name": "Tu Canción",
+  "version": 3,
+  "color": {
+    "themes": [
+      {
+        "id": "lado-a",
+        "name": "Lado A, canciones"
+      },
+      {
+        "id": "lado-b",
+        "name": "Lado B, fotos"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "birome",
+        "value": "#1E3C96",
+        "usage": "Lado A. Azul de birome: logo, títulos y bloques de fondo. Texto blanco encima da 9,8:1."
+      },
+      {
+        "name": "malvon",
+        "value": "#E0435C",
+        "usage": "Lado A. Acento: botón, precio del combo y dedicatoria a mano. Poco, alrededor del 10% de la pieza. Como texto sobre blanco (4,1:1) solo desde 24 px o en negrita desde 19 px."
+      },
+      {
+        "name": "tinta",
+        "value": "#16205A",
+        "usage": "Lado A. Texto sobre papel (14,1:1) y fondo de la franja final de las webs."
+      },
+      {
+        "name": "papel",
+        "value": "#F6F7FA",
+        "usage": "Lado A. Fondo general, alrededor del 60% de la pieza."
+      },
+      {
+        "name": "plata",
+        "value": "#5F6679",
+        "usage": "Lado A. Texto secundario sobre papel (5,4:1)."
+      },
+      {
+        "name": "blanco",
+        "value": "#FFFFFF",
+        "usage": "Tarjetas sobre papel y texto sobre birome, tinta o malvón."
+      },
+      {
+        "name": "yema",
+        "value": "#FFD23F",
+        "usage": "Lado B. Amarillo de la línea de fotos: fondo principal. Nunca lleva texto blanco encima."
+      },
+      {
+        "name": "cinta",
+        "value": "#1A1712",
+        "usage": "Lado B. Negro cálido: texto, logo y fondos oscuros. Sobre yema da 12,4:1."
+      },
+      {
+        "name": "etiqueta",
+        "value": "#FFFAEB",
+        "usage": "Lado B. Papel cálido: tarjetas, listas de precios y secciones largas de texto."
+      },
+      {
+        "name": "rec",
+        "value": "#D7301F",
+        "usage": "Lado B. Acento: botón, esquineros de las fotos y precio del combo. Como texto solo sobre etiqueta (4,6:1); sobre yema, desde 24 px o como forma."
+      },
+      {
+        "name": "ground",
+        "value": {
+          "lado-a": "{papel}",
+          "lado-b": "{yema}"
+        },
+        "usage": "Fondo de la pieza o de la página."
+      },
+      {
+        "name": "ink",
+        "value": {
+          "lado-a": "{tinta}",
+          "lado-b": "{cinta}"
+        },
+        "usage": "Texto principal sobre ground y sobre surface."
+      },
+      {
+        "name": "ink-muted",
+        "value": {
+          "lado-a": "{plata}",
+          "lado-b": "#4D4424"
+        },
+        "usage": "Texto secundario sobre ground: aclaraciones, pie de pieza."
+      },
+      {
+        "name": "display",
+        "value": {
+          "lado-a": "{birome}",
+          "lado-b": "{cinta}"
+        },
+        "usage": "Color de los títulos grandes sobre ground."
+      },
+      {
+        "name": "surface",
+        "value": {
+          "lado-a": "{blanco}",
+          "lado-b": "{etiqueta}"
+        },
+        "usage": "Tarjetas apoyadas sobre ground."
+      },
+      {
+        "name": "strong",
+        "value": {
+          "lado-a": "{birome}",
+          "lado-b": "{cinta}"
+        },
+        "usage": "Bloque o pieza de fondo oscuro."
+      },
+      {
+        "name": "on-strong",
+        "value": {
+          "lado-a": "{blanco}",
+          "lado-b": "{etiqueta}"
+        },
+        "usage": "Texto sobre strong."
+      },
+      {
+        "name": "display-on-strong",
+        "value": {
+          "lado-a": "{blanco}",
+          "lado-b": "{yema}"
+        },
+        "usage": "Títulos sobre strong."
+      },
+      {
+        "name": "muted-on-strong",
+        "value": {
+          "lado-a": "#C9D3FF",
+          "lado-b": "#C9BFA6"
+        },
+        "usage": "Texto secundario sobre strong."
+      },
+      {
+        "name": "accent",
+        "value": {
+          "lado-a": "{malvon}",
+          "lado-b": "{rec}"
+        },
+        "usage": "Acento: precio del combo, dedicatoria, esquineros. Una sola vez por pieza."
+      },
+      {
+        "name": "button",
+        "value": {
+          "lado-a": "{malvon}",
+          "lado-b": "{rec}"
+        },
+        "usage": "Fondo del botón principal."
+      },
+      {
+        "name": "on-button",
+        "value": "#FFFFFF",
+        "usage": "Texto del botón principal, en negrita y desde 19 px."
+      },
+      {
+        "name": "button-hover",
+        "value": {
+          "lado-a": "#C9324B",
+          "lado-b": "#B8271A"
+        },
+        "usage": "Fondo del botón principal al pasar el cursor."
+      },
+      {
+        "name": "line",
+        "value": {
+          "lado-a": "{tinta}",
+          "lado-b": "{cinta}"
+        },
+        "usage": "Renglones de 2 px: separadores de filas y bordes de tarjetas."
+      },
+      {
+        "name": "disco",
+        "value": {
+          "lado-a": "{birome}",
+          "lado-b": "{cinta}"
+        },
+        "usage": "Vinilo de la ó del logo sobre ground."
+      },
+      {
+        "name": "disco-etiqueta",
+        "value": {
+          "lado-a": "{malvon}",
+          "lado-b": "{rec}"
+        },
+        "usage": "Etiqueta del disco y tilde de la ó."
+      },
+      {
+        "name": "foto-vacia",
+        "value": {
+          "lado-a": "#C9CEDA",
+          "lado-b": "#C9BFB4"
+        },
+        "usage": "Relleno del marcador donde va una foto que todavía no está."
+      }
+    ]
+  },
+  "type": {
+    "fonts": [],
+    "families": {
+      "display": "\"Bricolage Grotesque\", \"Arial Narrow\", system-ui, sans-serif",
+      "body": "Figtree, \"Segoe UI\", system-ui, sans-serif",
+      "hand": "\"Reenie Beanie\", \"Segoe Print\", cursive"
+    },
+    "groups": [
+      {
+        "name": "Títulos",
+        "family": "display",
+        "styles": [
+          {
+            "name": "display-xl",
+            "fontSize": "84px",
+            "lineHeight": 0.98,
+            "fontWeight": 800,
+            "letterSpacing": "-0.03em",
+            "sample": "Tu historia, hecha canción.",
+            "usage": "Título de portada de las webs."
+          },
+          {
+            "name": "display-lg",
+            "fontSize": "46px",
+            "lineHeight": 1.02,
+            "fontWeight": 800,
+            "letterSpacing": "-0.02em",
+            "sample": "Ella te cantó toda la vida.",
+            "usage": "Título de un post o de una sección."
+          },
+          {
+            "name": "display-md",
+            "fontSize": "26px",
+            "lineHeight": 1.15,
+            "fontWeight": 700,
+            "letterSpacing": "-0.01em",
+            "sample": "Contanos su historia",
+            "usage": "Subtítulos y títulos de pasos."
+          },
+          {
+            "name": "precio",
+            "fontSize": "28px",
+            "lineHeight": 1.1,
+            "fontWeight": 800,
+            "letterSpacing": "-0.02em",
+            "sample": "$27.000",
+            "usage": "Precios, con cifras tabulares."
+          },
+          {
+            "name": "tag",
+            "fontSize": "17px",
+            "lineHeight": 1,
+            "fontWeight": 700,
+            "sample": "Lado A",
+            "usage": "Texto de las etiquetas Lado A y Lado B y del botón."
+          }
+        ]
+      },
+      {
+        "name": "Texto",
+        "family": "body",
+        "styles": [
+          {
+            "name": "body-lg",
+            "fontSize": "21px",
+            "lineHeight": 1.45,
+            "fontWeight": 400,
+            "sample": "Contanos dos o tres recuerdos de ella.",
+            "usage": "Bajada y párrafos principales."
+          },
+          {
+            "name": "body",
+            "fontSize": "18px",
+            "lineHeight": 1.5,
+            "fontWeight": 400,
+            "sample": "En 48 horas te mandamos la canción para que la escuches antes de regalarla.",
+            "usage": "Texto corrido."
+          },
+          {
+            "name": "label",
+            "fontSize": "15px",
+            "lineHeight": 1.3,
+            "fontWeight": 600,
+            "sample": "Pedila hasta el jueves 15/10",
+            "usage": "Pie de pieza, aclaraciones y usuario de redes."
+          }
+        ]
+      },
+      {
+        "name": "A mano",
+        "family": "hand",
+        "styles": [
+          {
+            "name": "hand",
+            "fontSize": "72px",
+            "lineHeight": 0.9,
+            "fontWeight": 400,
+            "sample": "para vos, ma",
+            "usage": "Solo dedicatorias de 2 a 6 palabras, como escritas con birome. El trazo es fino: nunca por debajo de 40 px."
+          }
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "tokens": [
+      {
+        "name": "space-1",
+        "value": "4px",
+        "usage": "Separación mínima."
+      },
+      {
+        "name": "space-2",
+        "value": "8px",
+        "usage": "Relleno vertical de las etiquetas de lado."
+      },
+      {
+        "name": "space-3",
+        "value": "14px",
+        "usage": "Entre etiqueta de lado y su texto; entre filas de precios."
+      },
+      {
+        "name": "space-4",
+        "value": "24px",
+        "usage": "Relleno de tarjetas y separación entre bloques de una pieza."
+      },
+      {
+        "name": "space-5",
+        "value": "32px",
+        "usage": "Margen interior de un post a 420 px de ancho de referencia."
+      },
+      {
+        "name": "space-6",
+        "value": "48px",
+        "usage": "Margen de página y separación entre secciones chicas."
+      },
+      {
+        "name": "space-7",
+        "value": "88px",
+        "usage": "Separación entre secciones de una web."
+      }
+    ]
+  },
+  "radius": {
+    "tokens": [
+      {
+        "name": "radius-sm",
+        "value": "4px",
+        "usage": "Etiquetas de lado y fotos."
+      },
+      {
+        "name": "radius-md",
+        "value": "6px",
+        "usage": "Tarjetas, listas de precios, botones."
+      },
+      {
+        "name": "radius-lg",
+        "value": "12px",
+        "usage": "Fundas y bloques grandes."
+      }
+    ]
+  }
+}

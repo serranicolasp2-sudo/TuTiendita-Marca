@@ -1,0 +1,300 @@
+{
+  "name": "Tu Canción",
+  "version": 2,
+  "color": {
+    "themes": [
+      {
+        "id": "yema",
+        "name": "Yema"
+      },
+      {
+        "id": "cinta",
+        "name": "Cinta"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "yema",
+        "value": "#FFD23F",
+        "usage": "Amarillo de marca. Fondo principal de piezas y del encabezado de las webs. Nunca lleva texto blanco encima."
+      },
+      {
+        "name": "cinta",
+        "value": "#1A1712",
+        "usage": "Negro cálido de la cinta. Texto, logo y fondos oscuros. Sobre yema da 12,4:1."
+      },
+      {
+        "name": "etiqueta",
+        "value": "#FFFAEB",
+        "usage": "Papel de la etiqueta del casete. Tarjetas, listas de precios y fondo de las secciones largas de texto."
+      },
+      {
+        "name": "rec",
+        "value": "#D7301F",
+        "usage": "Rojo del botón de grabar. Un solo uso por pieza: el precio del combo, la duración o el botón principal. Texto rec solo sobre etiqueta (4,6:1); sobre yema, solo desde 24 px o como forma."
+      },
+      {
+        "name": "ground",
+        "value": {
+          "yema": "{yema}",
+          "cinta": "{cinta}"
+        },
+        "usage": "Fondo de la pieza o de la página."
+      },
+      {
+        "name": "ink",
+        "value": {
+          "yema": "{cinta}",
+          "cinta": "{etiqueta}"
+        },
+        "usage": "Texto principal sobre ground."
+      },
+      {
+        "name": "ink-muted",
+        "value": {
+          "yema": "#4D4424",
+          "cinta": "#C9BFA6"
+        },
+        "usage": "Texto secundario sobre ground: aclaraciones, pie de pieza. 6,7:1 sobre yema."
+      },
+      {
+        "name": "display",
+        "value": {
+          "yema": "{cinta}",
+          "cinta": "{yema}"
+        },
+        "usage": "Color de los títulos grandes y del logo sobre ground."
+      },
+      {
+        "name": "surface",
+        "value": {
+          "yema": "{etiqueta}",
+          "cinta": "#2A2620"
+        },
+        "usage": "Tarjetas y etiquetas apoyadas sobre ground."
+      },
+      {
+        "name": "on-surface",
+        "value": {
+          "yema": "{cinta}",
+          "cinta": "{etiqueta}"
+        },
+        "usage": "Texto sobre surface."
+      },
+      {
+        "name": "accent",
+        "value": {
+          "yema": "{rec}",
+          "cinta": "#FF6B57"
+        },
+        "usage": "Acento sobre surface: precio del combo, duración de la canción."
+      },
+      {
+        "name": "chip",
+        "value": {
+          "yema": "{cinta}",
+          "cinta": "{yema}"
+        },
+        "usage": "Fondo de la etiqueta Lado A."
+      },
+      {
+        "name": "on-chip",
+        "value": {
+          "yema": "{yema}",
+          "cinta": "{cinta}"
+        },
+        "usage": "Texto sobre chip."
+      },
+      {
+        "name": "button",
+        "value": "#D7301F",
+        "usage": "Fondo del botón principal, igual en los dos temas."
+      },
+      {
+        "name": "on-button",
+        "value": "#FFFFFF",
+        "usage": "Texto del botón principal. 4,8:1 sobre button."
+      },
+      {
+        "name": "button-hover",
+        "value": "#B8271A",
+        "usage": "Fondo del botón principal al pasar el cursor."
+      },
+      {
+        "name": "line",
+        "value": {
+          "yema": "{cinta}",
+          "cinta": "#5A5345"
+        },
+        "usage": "Renglones de la etiqueta, separadores y bordes de 2 px."
+      },
+      {
+        "name": "foto-vacia",
+        "value": "#C9BFB4",
+        "usage": "Relleno del marcador donde va una foto que todavía no está."
+      }
+    ]
+  },
+  "type": {
+    "fonts": [],
+    "families": {
+      "display": "Archivo, \"Arial Black\", \"Arial Narrow\", sans-serif",
+      "body": "Archivo, \"Segoe UI\", system-ui, sans-serif",
+      "hand": "\"Permanent Marker\", \"Segoe Print\", cursive"
+    },
+    "groups": [
+      {
+        "name": "Títulos",
+        "family": "display",
+        "styles": [
+          {
+            "name": "display-xl",
+            "fontSize": "84px",
+            "lineHeight": 0.95,
+            "fontWeight": 900,
+            "letterSpacing": "-0.035em",
+            "sample": "tu canción",
+            "usage": "Logo en texto y título de portada. Siempre con font-stretch 125%."
+          },
+          {
+            "name": "display-lg",
+            "fontSize": "46px",
+            "lineHeight": 1.02,
+            "fontWeight": 900,
+            "letterSpacing": "-0.03em",
+            "sample": "Ella te cantó toda la vida.",
+            "usage": "Título de un post o de una sección. font-stretch 125%."
+          },
+          {
+            "name": "display-md",
+            "fontSize": "28px",
+            "lineHeight": 1.15,
+            "fontWeight": 800,
+            "letterSpacing": "-0.02em",
+            "sample": "Así se pide",
+            "usage": "Subtítulos. font-stretch 125%."
+          },
+          {
+            "name": "precio",
+            "fontSize": "26px",
+            "lineHeight": 1.1,
+            "fontWeight": 900,
+            "letterSpacing": "-0.02em",
+            "sample": "$27.000",
+            "usage": "Precios, con cifras tabulares. font-stretch 125%."
+          }
+        ]
+      },
+      {
+        "name": "Texto",
+        "family": "body",
+        "styles": [
+          {
+            "name": "body-lg",
+            "fontSize": "20px",
+            "lineHeight": 1.45,
+            "fontWeight": 400,
+            "sample": "Contanos dos o tres recuerdos de ella.",
+            "usage": "Bajada y párrafos principales."
+          },
+          {
+            "name": "body",
+            "fontSize": "17px",
+            "lineHeight": 1.5,
+            "fontWeight": 400,
+            "sample": "En 48 horas te mandamos la canción para que la escuches antes de regalarla.",
+            "usage": "Texto corrido."
+          },
+          {
+            "name": "label",
+            "fontSize": "15px",
+            "lineHeight": 1.3,
+            "fontWeight": 600,
+            "sample": "Pedila hasta el jueves 15/10",
+            "usage": "Pie de pieza, aclaraciones y usuario de redes."
+          },
+          {
+            "name": "tag",
+            "fontSize": "18px",
+            "lineHeight": 1,
+            "fontWeight": 800,
+            "sample": "Lado A",
+            "usage": "Texto de las etiquetas Lado A y Lado B. font-stretch 125%."
+          }
+        ]
+      },
+      {
+        "name": "A mano",
+        "family": "hand",
+        "styles": [
+          {
+            "name": "hand",
+            "fontSize": "44px",
+            "lineHeight": 1.1,
+            "fontWeight": 400,
+            "sample": "Para mamá",
+            "usage": "Solo lo que alguien escribiría con marcador en la etiqueta del casete: una dedicatoria de 2 a 5 palabras."
+          }
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "tokens": [
+      {
+        "name": "space-1",
+        "value": "4px",
+        "usage": "Separación mínima entre renglones de una etiqueta."
+      },
+      {
+        "name": "space-2",
+        "value": "8px",
+        "usage": "Relleno vertical de las etiquetas de lado."
+      },
+      {
+        "name": "space-3",
+        "value": "14px",
+        "usage": "Entre etiqueta de lado y su texto; entre filas de precios."
+      },
+      {
+        "name": "space-4",
+        "value": "24px",
+        "usage": "Relleno de tarjetas y separación entre bloques de una pieza."
+      },
+      {
+        "name": "space-5",
+        "value": "32px",
+        "usage": "Margen interior de un post de 420 px de ancho de referencia."
+      },
+      {
+        "name": "space-6",
+        "value": "48px",
+        "usage": "Margen de página y separación entre secciones chicas."
+      },
+      {
+        "name": "space-7",
+        "value": "88px",
+        "usage": "Separación entre secciones de una web."
+      }
+    ]
+  },
+  "radius": {
+    "tokens": [
+      {
+        "name": "radius-sm",
+        "value": "4px",
+        "usage": "Etiquetas de lado y la etiqueta del casete en el símbolo."
+      },
+      {
+        "name": "radius-md",
+        "value": "6px",
+        "usage": "Tarjetas, listas de precios, botones."
+      },
+      {
+        "name": "radius-lg",
+        "value": "12px",
+        "usage": "Cuerpo del casete cuando se dibuja grande."
+      }
+    ]
+  }
+}
